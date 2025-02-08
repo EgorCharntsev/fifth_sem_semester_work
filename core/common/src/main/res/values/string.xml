@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bad_request_error">Bad request error!</string>
+    <string name="unauthorized_error">Unauthorized error!</string>
+    <string name="not_found_error">Not found error!</string>
+    <string name="too_many_requests_error">Too many requests error!</string>
+    <string name="server_error">Server error!</string>
+</resources>

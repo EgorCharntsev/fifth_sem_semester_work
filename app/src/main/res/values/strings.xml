@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FifthSemWork</string>
+
+    <string name="label_home">Home</string>
+    <string name="label_search">Search</string>
+    <string name="label_favorites">Favorites</string>
+    <string name="label_profile">Profile</string>
+
 </resources>

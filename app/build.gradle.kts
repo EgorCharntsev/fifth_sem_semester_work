@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.org.jetbrains.kotlin.android)
+
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.devtools.ksp)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -9,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "ru.kpfu.itis.fifthsemwork"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -51,8 +55,23 @@ android {
 
 dependencies {
 
+    implementation(project(":core:common"))
     implementation(project(":core:db"))
     implementation(project(":core:designsystem"))
+    implementation(project(":core:network"))
+
+    implementation(project(":feature:home:api"))
+    implementation(project(":feature:home:impl"))
+    implementation(project(":feature:favorites:api"))
+    implementation(project(":feature:favorites:impl"))
+    implementation(project(":feature:search:api"))
+    implementation(project(":feature:search:impl"))
+    implementation(project(":feature:authorization:api"))
+    implementation(project(":feature:authorization:impl"))
+
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
